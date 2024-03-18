@@ -16,17 +16,17 @@ namespace FishPredictor.Controllers
 
         // GET ALL
         [HttpGet]
-        public IActionResult GetAllFishes()
+        public async Task<IActionResult> GetAllFishes()
         {
-            var fishes = _context.Fishes.ToList();
+            var fishes = await _context.Fishes.ToListAsync();
             return Ok(fishes);
         }
 
         // GET
         [HttpGet("{id}")]
-        public IActionResult GetFishDetails(int id)
+        public async Task<IActionResult> GetFishDetails(int id)
         {
-            var fish = _context.Fishes.Find(id);
+            var fish = await _context.Fishes.FindAsync(id);
 
             if (fish == null)
             {
@@ -37,17 +37,17 @@ namespace FishPredictor.Controllers
 
         // POST
         [HttpPost]
-        public IActionResult CreateFish([FromBody] Fish fish)
+        public async Task<IActionResult> CreateFish([FromBody] Fish fish)
         {
             _context.Fishes.Add(fish);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetFishDetails), new { id = fish.Id }, fish);
         }
 
         // PUT
         [HttpPut("{id}")]
-        public IActionResult UpdateFish(int id, [FromBody] Fish fish)
+        public async Task<IActionResult> UpdateFish(int id, [FromBody] Fish fish)
         {
             if (id != fish.Id)
             {
@@ -55,16 +55,16 @@ namespace FishPredictor.Controllers
             }
 
             _context.Entry(fish).State = EntityState.Modified;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
         // DELETE
         [HttpDelete("{id}")]
-        public IActionResult DeleteFish(int id)
+        public async Task<IActionResult> DeleteFish(int id)
         {
-            var fish = _context.Fishes.Find(id);
+            var fish = await _context.Fishes.FindAsync(id);
 
             if (fish == null)
             {
@@ -72,7 +72,7 @@ namespace FishPredictor.Controllers
             }
 
             _context.Fishes.Remove(fish);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return NoContent();
         }
