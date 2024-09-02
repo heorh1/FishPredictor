@@ -148,3 +148,5 @@ C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\obj\Debug\net8.0\re
 C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\obj\Debug\net8.0\FishPredictor.tests.pdb
 C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\obj\Debug\net8.0\FishPredictor.tests.genruntimeconfig.cache
 C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\obj\Debug\net8.0\ref\FishPredictor.tests.dll
+C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\bin\Debug\net8.0\FishPredictor.DB.dll
+C:\Users\user\source\repos\FishPredictor\FishPredictor.tests\bin\Debug\net8.0\FishPredictor.DB.pdb

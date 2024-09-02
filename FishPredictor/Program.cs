@@ -1,11 +1,23 @@
+using FishPredictor.DB;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Registering HttpClientFactory
+builder.Services.AddHttpClient(); // Простая регистрация HttpClient
+
+builder.Services.AddHttpClient<WeatherService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<FishContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BloggingDatabase")));
+
 
 var app = builder.Build();
 

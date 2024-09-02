@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FishPredictor.DB;
 
 namespace FishPredictor.Controllers
 {
@@ -8,10 +9,12 @@ namespace FishPredictor.Controllers
     public class FishesController : ControllerBase
     {
         private readonly FishContext _context;
+        private readonly WeatherService _weatherService;
 
-        public FishesController(FishContext context)
+        public FishesController(FishContext context, WeatherService weatherService)
         {
             _context = context;
+            _weatherService = weatherService;
         }
 
         // GET ALL
@@ -75,6 +78,21 @@ namespace FishPredictor.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        // NEW METHOD FOR WEATHER DATA
+        [HttpGet("weather")]
+        public async Task<IActionResult> GetWeather()
+        {
+            var (dates, maxTemperatures, minTemperatures, averagePressures) = await _weatherService.GetWeatherForecastAsync();
+
+            return Ok(new
+            {
+                Dates = dates,
+                MaxTemperatures = maxTemperatures,
+                MinTemperatures = minTemperatures,
+                AveragePressures = averagePressures
+            });
         }
     }
 }

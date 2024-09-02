@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FishPredictor.tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f8708f709270ecd8af1cf148a49947044a5aef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62259d60894afba56e79ff8c89cde01deeeaa26")]
 [assembly: System.Reflection.AssemblyProductAttribute("FishPredictor.tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FishPredictor.tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
