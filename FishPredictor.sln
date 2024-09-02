@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishPredictor", "FishPredictor\FishPredictor.csproj", "{B77EA61D-08A7-4430-9C16-5D3DFFB07565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishPredictor", "FishPredictor\FishPredictor.csproj", "{B77EA61D-08A7-4430-9C16-5D3DFFB07565}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishPredictor.tests", "FishPredictor.tests\FishPredictor.tests.csproj", "{6001DDC6-9CEE-4736-8791-3630CE1681CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishPredictor.DB", "FishPredictor.DB\FishPredictor.DB.csproj", "{71EC432C-19FF-448B-A5A8-ADF680566CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B77EA61D-08A7-4430-9C16-5D3DFFB07565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B77EA61D-08A7-4430-9C16-5D3DFFB07565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B77EA61D-08A7-4430-9C16-5D3DFFB07565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6001DDC6-9CEE-4736-8791-3630CE1681CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6001DDC6-9CEE-4736-8791-3630CE1681CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6001DDC6-9CEE-4736-8791-3630CE1681CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6001DDC6-9CEE-4736-8791-3630CE1681CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71EC432C-19FF-448B-A5A8-ADF680566CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71EC432C-19FF-448B-A5A8-ADF680566CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71EC432C-19FF-448B-A5A8-ADF680566CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71EC432C-19FF-448B-A5A8-ADF680566CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

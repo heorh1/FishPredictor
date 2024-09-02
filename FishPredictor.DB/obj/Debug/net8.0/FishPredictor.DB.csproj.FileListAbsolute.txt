@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.AssemblyInfo.cs
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.sourcelink.json
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\bin\Debug\net8.0\FishPredictor.DB.deps.json
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\bin\Debug\net8.0\FishPredictor.DB.runtimeconfig.json
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\bin\Debug\net8.0\FishPredictor.DB.dll
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\bin\Debug\net8.0\FishPredictor.DB.pdb
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.dll
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\refint\FishPredictor.DB.dll
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.pdb
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\FishPredictor.DB.genruntimeconfig.cache
+C:\Users\user\source\repos\FishPredictor\FishPredictor.DB\obj\Debug\net8.0\ref\FishPredictor.DB.dll
