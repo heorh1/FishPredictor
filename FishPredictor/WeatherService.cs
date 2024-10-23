@@ -12,7 +12,7 @@ public class WeatherService
         _httpClient = httpClient;
     }
 
-    public async Task<(Hashtable Dates, List<double> MaxTemperatures, List<double> MinTemperatures, List<double> AveragePressures)> GetWeatherForecastAsync()
+    public async Task<(List<DateTime> Dates, List<double> MaxTemperatures, List<double> MinTemperatures, List<double> AveragePressures)> GetWeatherForecastAsync()
     {
         var url = "https://api.open-meteo.com/v1/forecast?latitude=52&longitude=20&daily=temperature_2m_max,temperature_2m_min,surface_pressure_max,surface_pressure_min";
 
@@ -24,13 +24,11 @@ public class WeatherService
         var content = await response.Content.ReadAsStringAsync();
         var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(content);
 
-        // Создание списков для хранения температур и среднего давления
+        // Создание списков для хранения дат (DateTime), температур и среднего давления
+        List<DateTime> dates = new List<DateTime>();
         List<double> maxTemperatures = new List<double>();
         List<double> minTemperatures = new List<double>();
         List<double> averagePressures = new List<double>();
-
-        // Создание Hashtable для хранения дат
-        Hashtable dates = new Hashtable();
 
         for (int i = 0; i < 7; i++)
         {
@@ -47,11 +45,18 @@ public class WeatherService
             var minPressure = weatherForecast?.Daily?.MinPressures?[i] ?? double.NaN;
             var avgPressure = (maxPressure + minPressure) / 2;
 
-            // Добавление среднего давления в список
-            averagePressures.Add(avgPressure);
+            // Округление среднего давления до одного знака после запятой и добавление в список
+            averagePressures.Add(Math.Round(avgPressure, 1));
 
-            // Сохранение даты в Hashtable (ключи от 1 до 7)
-            dates.Add(i + 1, weatherForecast?.Daily?.Dates?[i]);
+            // Преобразование даты из строки в DateTime и добавление в список
+            if (DateTime.TryParse(weatherForecast.Daily.Dates[i], out var parsedDate))
+            {
+                dates.Add(parsedDate);
+            }
+            else
+            {
+                throw new Exception($"Невозможно преобразовать строку даты '{weatherForecast.Daily.Dates[i]}' в DateTime.");
+            }
         }
 
         return (dates, maxTemperatures, minTemperatures, averagePressures);

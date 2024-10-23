@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FishPredictor.DB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62259d60894afba56e79ff8c89cde01deeeaa26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd000688f0beb462f38655011c45abdeb514bd6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FishPredictor.DB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FishPredictor.DB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
